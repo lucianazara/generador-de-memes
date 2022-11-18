@@ -209,9 +209,9 @@ color: var(--color-texto);
     visibility: visible;
 }
 
-.ocultar {
-    visibility: hidden;
-}
+/* .ocultar {
+   visibility: hidden;
+} */
 
 .boton-cerrar {
     position: fixed;
@@ -223,5 +223,6 @@ color: var(--color-texto);
     font-weight: 1200;
 }
 
+        
 
-
+        
