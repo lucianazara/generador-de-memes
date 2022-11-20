@@ -11,6 +11,8 @@ let botonCerrar = $(".boton-cerrar");
 let botonCerrarTexto = $("#boton-cerrar-texto");
 let botonCerrarImagen = $("#boton-cerrar-imagen");
 let menu = $(".menu");
+let imagenURL = $("#url");
+let memeImagen = $(".meme-imagen");
 
 enlaceImagen.addEventListener("click", function() {
     panelImagen.classList.add("desplegar");
@@ -38,24 +40,20 @@ botonModoOscuro.addEventListener("click", function(){
 })
 
 
-// panelImagen.addEventListener("onload", function(){
-//     panelImagen.classList.add("ocultar");
-// })
 panelImagen.addEventListener("click", function(){
     panelImagen.classList.add("desplegar");
-    panelImagen.classList.remove("desplegar");
-    })
+    // panelImagen.classList.remove("desplegar");
 
-botonCerrarImagen.addEventListener("click", function(){
-    panelImagen.classList.remove("desplegar");
-})
+    })
 
 
 panelTexto.addEventListener("click", function(){
     panelTexto.classList.add("desplegar");
-    panelTexto.classList.remove("desplegar");
+    console.log("click");
     })
 
-botonCerrarTexto.addEventListener("click", function(){
-    panelTexto.classList.remove("desplegar");
+
+imagenURL.addEventListener("input", function(event){
+  let url = event.target.value;
+  memeImagen.style.backgroundImage = `url(${url})`;
 })
