@@ -21,13 +21,13 @@
 <body>
     <div class="meme-contenedor">
     <div class="meme-generador">
-        <div class="meme-generador-texto">
+        <div id= "contenedor-texto-superior" class="meme-generador-texto">
            <p id="parrafo-texto-superior">
             TEXTO SUPERIOR
            </p>
         </div>
         <div class="meme-imagen"></div>
-        <div class="meme-generador-texto">
+        <div id="contenedor-texto-inferior" class="meme-generador-texto">
             <p id="parrafo-texto-inferior">
                 TEXTO INFERIOR
                </p>
@@ -109,14 +109,14 @@
         <div class="texto-menu">
             <label for="superior">SUPERIOR</label>
             <textarea id="texto-superior" cols="30" rows="3">TOP TEXT</textarea>
-            <input type="checkbox">
-            <label for="">Sin texto superior</label>
+            <input id="sin-texto-superior" type="checkbox">
+            <label for="sin-texto-superior">Sin texto superior</label>
         </div>
       <div class="texto-menu">
         <label for="inferior">BOTTOM TEXT</label>
         <textarea id="texto-inferior" cols="30" rows="3">INFERIOR</textarea>
-        <input type="checkbox">
-        <label for="">Sin texto inferior</label>
+        <input id="sin-texto-inferior" type="checkbox">
+        <label>Sin texto inferior</label>
       </div>
       <div class="texto-menu">
 <label for="fuente">FUENTE</label>

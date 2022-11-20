@@ -210,9 +210,9 @@ visibility: hidden;
     visibility: visible;
 }
 
-/* .ocultar {
+.ocultar {
  display: none;
-} */
+}
 
 .boton-cerrar {
     position: fixed;
@@ -231,4 +231,3 @@ visibility: hidden;
     font-size: xx-large;
 }
         
-

@@ -19,6 +19,12 @@ let parrafoTextoSuperior = $("#parrafo-texto-superior");
 let parrafoTextoInferior = $("#parrafo-texto-inferior");
 let inputTextoSuperior = $("#texto-superior");
 let inputTextoInferior = $("#texto-inferior");
+let sinTextoSuperior = $("#sin-texto-superior");
+let sinTextoInferior = $("#sin-texto-inferior");
+let contenedorTextoSuperior = $("#contenedor-texto-superior");
+let contenedorTextoInferior = $("#contenedor-texto-inferior");
+
+
 
 enlaceImagen.addEventListener("click", function() {
     panelImagen.classList.add("desplegar");
@@ -64,6 +70,7 @@ imagenURL.addEventListener("input", function(event){
   memeImagen.style.backgroundImage = `url(${url})`;
 })
 
+// MODIFICAR TEXTOS
 inputTextoSuperior.addEventListener("input", function(event){
     parrafoTextoSuperior.innerText = event.target.value;
 })
@@ -71,3 +78,13 @@ inputTextoSuperior.addEventListener("input", function(event){
 inputTextoInferior.addEventListener("input", function(event){
     parrafoTextoInferior.innerText = event.target.value;
 })
+
+// OCULTAR TEXTOS
+sinTextoSuperior.addEventListener("click", function(){
+    contenedorTextoSuperior.classList.toggle("ocultar");
+})
+
+sinTextoInferior.addEventListener("click", function(){
+    contenedorTextoInferior.classList.toggle("ocultar");
+})
+
