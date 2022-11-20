@@ -13,6 +13,12 @@ let botonCerrarImagen = $("#boton-cerrar-imagen");
 let menu = $(".menu");
 let imagenURL = $("#url");
 let memeImagen = $(".meme-imagen");
+let textoSuperior = $("#meme-texto-superior");
+let textoInferior = $("#meme-texto-inferior");
+let parrafoTextoSuperior = $("#parrafo-texto-superior");
+let parrafoTextoInferior = $("#parrafo-texto-inferior");
+let inputTextoSuperior = $("#texto-superior");
+let inputTextoInferior = $("#texto-inferior");
 
 enlaceImagen.addEventListener("click", function() {
     panelImagen.classList.add("desplegar");
@@ -56,4 +62,12 @@ panelTexto.addEventListener("click", function(){
 imagenURL.addEventListener("input", function(event){
   let url = event.target.value;
   memeImagen.style.backgroundImage = `url(${url})`;
+})
+
+inputTextoSuperior.addEventListener("input", function(event){
+    parrafoTextoSuperior.innerText = event.target.value;
+})
+
+inputTextoInferior.addEventListener("input", function(event){
+    parrafoTextoInferior.innerText = event.target.value;
 })

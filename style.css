@@ -224,5 +224,11 @@ visibility: hidden;
     font-weight: 1200;
 }
 
+.meme-generador-texto {
+    color: black;
+    text-align: center;
+    align-items: center;
+    font-size: xx-large;
+}
         
 
