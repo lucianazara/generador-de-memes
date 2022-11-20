@@ -236,3 +236,7 @@ visibility: hidden;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
         
+.fondo-transparente {
+    background-color: transparent;
+}
+

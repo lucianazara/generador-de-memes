@@ -1,5 +1,5 @@
 let $ = (selector) => document.querySelector(selector);
-let $$ = (selector) => document.querySelector(selector);
+let $$ = (selector) => document.querySelectorAll(selector);
 
 let enlaceImagen = $("#imagen-nav");
 let panelImagen = $(".seccion-imagen");
@@ -29,7 +29,9 @@ let botonAlineacion = $(".botones-alineacion");
 let botonIzquierda = $("#btn-izquierda");
 let botonCentro = $("#btn-centro");
 let botonDerecha = $("#btn-derecha");
-
+let colorTexto = $("#color-texto");
+let colorFondo = $("#color-fondo");
+let fondoTransparente = $("#fondo-transparente")
 
 
 enlaceImagen.addEventListener("click", function() {
@@ -127,3 +129,25 @@ botonCentro.addEventListener("click", function(event){
 botonDerecha.addEventListener("click", function(event){
     parrafoTextoSuperior.style.textAlign = "right";
 })
+
+//CAMBIAR COLOR
+
+colorTexto.addEventListener("input", function(event){
+    let colorElegidoTexto = event.target.value;
+    parrafoTextoSuperior.style.color = colorElegidoTexto;
+    parrafoTextoInferior.style.color = colorElegidoTexto;
+})
+
+colorFondo.addEventListener("change", function(event){
+    let colorElegidoFondo = event.target.value;
+    contenedorTextoSuperior.style.backgroundColor = colorElegidoFondo;
+    contenedorTextoInferior.style.backgroundColor= colorElegidoFondo;
+})
+
+fondoTransparente.addEventListener("click", function(event){
+    if(fondoTransparente.checked){
+        contenedorTextoSuperior.classList.add("fondo-transparente");
+        contenedorTextoInferior.classList.add("fondo-transparente");
+    }
+})
+
