@@ -24,6 +24,7 @@ let sinTextoInferior = $("#sin-texto-inferior");
 let contenedorTextoSuperior = $("#contenedor-texto-superior");
 let contenedorTextoInferior = $("#contenedor-texto-inferior");
 let tipografia = $("#tipografia");
+let tamanoFuente = $("#tamano-fuente");
 
 
 
@@ -96,3 +97,16 @@ tipografia.addEventListener("change", function(event){
     parrafoTextoSuperior.style.fontFamily = tipografiaElegida;
     parrafoTextoInferior.style.fontFamily = tipografiaElegida;
 })
+
+tipografia.addEventListener("change", function(event){
+    let tipografiaElegida = event.target.value;
+    parrafoTextoSuperior.style.fontFamily = tipografiaElegida;
+    parrafoTextoInferior.style.fontFamily = tipografiaElegida;
+})
+
+tamanoFuente.addEventListener("input", function(event){
+    let tamanoFuenteElegido = event.target.value;
+    parrafoTextoSuperior.style.fontSize = `${tamanoFuenteElegido}px`;
+    parrafoTextoInferior.style.fontSize = `${tamanoFuenteElegido}px`;
+})
+
