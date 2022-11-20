@@ -23,6 +23,7 @@ let sinTextoSuperior = $("#sin-texto-superior");
 let sinTextoInferior = $("#sin-texto-inferior");
 let contenedorTextoSuperior = $("#contenedor-texto-superior");
 let contenedorTextoInferior = $("#contenedor-texto-inferior");
+let tipografia = $("#tipografia");
 
 
 
@@ -61,9 +62,9 @@ panelImagen.addEventListener("click", function(){
 
 panelTexto.addEventListener("click", function(){
     panelTexto.classList.add("desplegar");
-    console.log("click");
     })
 
+// AGREGAR IMAGEN
 
 imagenURL.addEventListener("input", function(event){
   let url = event.target.value;
@@ -88,3 +89,10 @@ sinTextoInferior.addEventListener("click", function(){
     contenedorTextoInferior.classList.toggle("ocultar");
 })
 
+// CAMBIAR TIPOGRAFIA
+
+tipografia.addEventListener("change", function(event){
+    let tipografiaElegida = event.target.value;
+    parrafoTextoSuperior.style.fontFamily = tipografiaElegida;
+    parrafoTextoInferior.style.fontFamily = tipografiaElegida;
+})

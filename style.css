@@ -57,6 +57,7 @@ body {
 }
 
 
+
 h1 {
     text-align: center;
     padding: 1rem;
@@ -140,6 +141,9 @@ a:visited {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
+    background-position: center;
+    flex-grow: 1;
+    background-size: cover;
 }
 .meme-generador-texto {
     height: 80px;
@@ -229,5 +233,6 @@ visibility: hidden;
     text-align: center;
     align-items: center;
     font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
         
