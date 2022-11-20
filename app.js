@@ -25,6 +25,10 @@ let contenedorTextoSuperior = $("#contenedor-texto-superior");
 let contenedorTextoInferior = $("#contenedor-texto-inferior");
 let tipografia = $("#tipografia");
 let tamanoFuente = $("#tamano-fuente");
+let botonAlineacion = $(".botones-alineacion");
+let botonIzquierda = $("#btn-izquierda");
+let botonCentro = $("#btn-centro");
+let botonDerecha = $("#btn-derecha");
 
 
 
@@ -110,3 +114,16 @@ tamanoFuente.addEventListener("input", function(event){
     parrafoTextoInferior.style.fontSize = `${tamanoFuenteElegido}px`;
 })
 
+// ALINEACION DE TEXTO
+
+botonIzquierda.addEventListener("click", function(event){
+    parrafoTextoSuperior.style.textAlign = "left";
+})
+
+botonCentro.addEventListener("click", function(event){
+    parrafoTextoSuperior.style.textAlign = "center";
+})
+
+botonDerecha.addEventListener("click", function(event){
+    parrafoTextoSuperior.style.textAlign = "right";
+})
