@@ -35,6 +35,7 @@ let fondoTransparente = $("#fondo-transparente")
 let textosMeme = $$(".meme-generador-texto");
 let botonContornoClaro = $("#btn-contorno-claro");
 let botonContornoOscuro = $("#btn-contorno-oscuro");
+let espaciado = $("#espaciado");
 
 
 
@@ -168,5 +169,14 @@ botonContornoOscuro.addEventListener("click", function(){
     parrafoTextoSuperior.classList.toggle("contorno-oscuro");
     parrafoTextoInferior.classList.toggle("contorno-oscuro");
 
+})
+
+//ESPACIADO
+espaciado.addEventListener("input", function(event){
+    let espaciadoElegido = event.target.value;
+    contenedorTextoSuperior.style.paddingTop = `${espaciadoElegido}px`;
+    contenedorTextoSuperior.style.paddingBottom = `${espaciadoElegido}px`;
+    contenedorTextoInferior.style.paddingTop = `${espaciadoElegido}px`;
+    contenedorTextoInferior.style.paddingBottom= `${espaciadoElegido}px`;
 })
 
