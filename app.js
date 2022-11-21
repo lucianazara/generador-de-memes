@@ -40,7 +40,8 @@ let interlineado = $("#interlineado");
 
 //VARIABLES SECCION IMAGEN
 let colorFondoMeme = $("#color-fondo");
-
+let efectoEstablecido = $("#efecto-preestablecido");
+let contenedorMeme = $(".contenedor-meme-imagen");
 
 enlaceImagen.addEventListener("click", function() {
     panelImagen.classList.add("desplegar");
@@ -195,5 +196,25 @@ interlineado.addEventListener("click", function(event){
 colorFondoMeme.addEventListener("input", function(event){
     let colorFondoMemeElegido = event.target.value;
     memeImagen.style.backgroundColor = colorFondoMemeElegido;
+})
+
+
+//EFECTO DE FONDO
+
+efectoEstablecido.addEventListener("change", function(event){
+ let efecto = event.target.value;
+    if(efecto == "Ninguno"){
+        contenedorMeme.style.backgroundBlendMode = "normal";
+    }else if(efecto == "Aclarar"){
+        memeImagen.style.backgroundBlendMode = "lighten";
+    }else if(efecto == "Oscurecer"){
+        memeImagen.style.backgroundBlendMode = "darken";
+    }else if(efecto == "Luminosidad"){
+        memeImagen.style.backgroundBlendMode = "luminosity";
+    }else if(efecto == "Diferencia"){
+       memeImagen.style.backgroundBlendMode = "difference";
+    }else if(efecto == "Multiplicar"){
+        memeImagen.style.backgroundBlendMode = "multiply";
+    }
 })
 
