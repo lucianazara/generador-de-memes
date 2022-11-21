@@ -32,6 +32,10 @@ let botonDerecha = $("#btn-derecha");
 let colorTexto = $("#color-texto");
 let colorFondo = $("#color-fondo");
 let fondoTransparente = $("#fondo-transparente")
+let textosMeme = $$(".meme-generador-texto");
+let botonContornoClaro = $("#btn-contorno-claro");
+let botonContornoOscuro = $("#btn-contorno-oscuro");
+
 
 
 enlaceImagen.addEventListener("click", function() {
@@ -144,10 +148,25 @@ colorFondo.addEventListener("change", function(event){
     contenedorTextoInferior.style.backgroundColor= colorElegidoFondo;
 })
 
-fondoTransparente.addEventListener("click", function(event){
-    if(fondoTransparente.checked){
-        contenedorTextoSuperior.classList.add("fondo-transparente");
-        contenedorTextoInferior.classList.add("fondo-transparente");
-    }
+// FONDO TRANSPARENTE
+fondoTransparente.addEventListener("click", function(){
+       parrafoTextoSuperior.classList.add("fondo-transparente");
+        contenedorTextoSuperior.classList.add("ocultar");
+        parrafoTextoSuperior.classList.add("fondo-transparente");
+        contenedorTextoInferior.classList.add("ocultar");
+
+})
+
+// CONTORNO 
+botonContornoClaro.addEventListener("click", function(){
+    parrafoTextoSuperior.classList.toggle("contorno-claro");
+    parrafoTextoInferior.classList.toggle("contorno-claro");
+
+})
+
+botonContornoOscuro.addEventListener("click", function(){
+    parrafoTextoSuperior.classList.toggle("contorno-oscuro");
+    parrafoTextoInferior.classList.toggle("contorno-oscuro");
+
 })
 
