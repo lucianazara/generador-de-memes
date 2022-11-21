@@ -36,7 +36,7 @@ let textosMeme = $$(".meme-generador-texto");
 let botonContornoClaro = $("#btn-contorno-claro");
 let botonContornoOscuro = $("#btn-contorno-oscuro");
 let espaciado = $("#espaciado");
-
+let interlineado = $("#interlineado");
 
 
 enlaceImagen.addEventListener("click", function() {
@@ -178,5 +178,12 @@ espaciado.addEventListener("input", function(event){
     contenedorTextoSuperior.style.paddingBottom = `${espaciadoElegido}px`;
     contenedorTextoInferior.style.paddingTop = `${espaciadoElegido}px`;
     contenedorTextoInferior.style.paddingBottom= `${espaciadoElegido}px`;
+})
+
+//INTERLINEADO
+
+interlineado.addEventListener("click", function(event){
+    parrafoTextoSuperior.style.lineHeight = `${event.target.value}px`;
+    parrafoTextoInferior.style.lineHeight = `${event.target.value}px`;
 })
 
