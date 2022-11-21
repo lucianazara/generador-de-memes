@@ -38,6 +38,9 @@ let botonContornoOscuro = $("#btn-contorno-oscuro");
 let espaciado = $("#espaciado");
 let interlineado = $("#interlineado");
 
+//VARIABLES SECCION IMAGEN
+let colorFondoMeme = $("#color-fondo");
+
 
 enlaceImagen.addEventListener("click", function() {
     panelImagen.classList.add("desplegar");
@@ -185,5 +188,12 @@ espaciado.addEventListener("input", function(event){
 interlineado.addEventListener("click", function(event){
     parrafoTextoSuperior.style.lineHeight = `${event.target.value}px`;
     parrafoTextoInferior.style.lineHeight = `${event.target.value}px`;
+})
+
+//SECCION IMAGEN
+
+colorFondoMeme.addEventListener("input", function(event){
+    let colorFondoMemeElegido = event.target.value;
+    memeImagen.style.backgroundColor = colorFondoMemeElegido;
 })
 
