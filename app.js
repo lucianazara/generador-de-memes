@@ -3,8 +3,10 @@ let $$ = (selector) => document.querySelectorAll(selector);
 
 let enlaceImagen = $("#imagen-nav");
 let panelImagen = $(".seccion-imagen");
+let seccionImagen = $("#seccion-panel-imagen");
 let enlaceTexto = $("#texto-nav");
 let panelTexto = $(".seccion-texto");
+let seccionTexto = $("#seccion-panel-texto");
 let botonModoOscuro =$("#modo-oscuro");
 let body = $("body");
 let botonCerrar = $(".boton-cerrar");
@@ -70,15 +72,21 @@ botonModoOscuro.addEventListener("click", function(){
 
 
 panelImagen.addEventListener("click", function(){
-    panelImagen.classList.add("desplegar");
-    // panelImagen.classList.remove("desplegar");
-
+    seccionImagen.classList.add("desplegar");
     })
-
 
 panelTexto.addEventListener("click", function(){
-    panelTexto.classList.add("desplegar");
+    seccionTexto.classList.add("desplegar");
     })
+
+// //BOTONES CERRAR
+// botonCerrarImagen.addEventListener("click", function(){
+//     seccionImagen.classList.add("ocultar");
+// })
+
+// botonCerrarImagen.addEventListener("click", function(){
+//     seccionTexto.classList.add("ocultar");
+// })
 
 // AGREGAR IMAGEN
 
@@ -217,4 +225,5 @@ efectoEstablecido.addEventListener("change", function(event){
         memeImagen.style.backgroundBlendMode = "multiply";
     }
 })
+
 
