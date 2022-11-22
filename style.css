@@ -35,8 +35,9 @@
     --menu-imagen: var(--violeta-azulado);
     --menu-texto: var(--violeta-azulado);
     --filtro-rango: var(--lila);
-    --color-hover: var(--lila-claro);
+    --color-hover: var(--lila);
     --meme-texto: var(--blanco-lila);
+    --boton-descargar: var(--lila-claro);
 }
 
 .modo-claro {
@@ -47,7 +48,8 @@
     --menu-texto: var(--gris-oscuro);
     --filtro-rango: var(--gris-super-oscuro);
     --meme-texto: var(--blanco-gris);
-    --color-hover: var(--gris-claro);
+    --color-hover: var(--lila);
+    --boton-descargar: var(--lila-claro);
 }
 
 body {
@@ -173,6 +175,11 @@ a:visited {
     width: 180px;
     height: 60px;
     border-radius: 30px;
+    background-color: var(--boton-descargar);
+}
+
+#boton-descargar:hover{
+    background-color: var(--color-hover);
 }
 
 /* SECCION IMAGEN */

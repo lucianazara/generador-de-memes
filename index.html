@@ -65,35 +65,39 @@
 <h3>FILTROS</h3>
 <div class="filtro-rango">
     <label for="brillo">BRILLO</label>
-    <input type="range">
+    <input type="range" id="brillo" value="1" min="0" max="1" step="0.1">
 </div>
    <div class="filtro-rango">
     <label for="opacidad">OPACIDAD</label>
-    <input type="range">
+    <input type="range" id="opacidad" min="0" max="1" value="1" step="0.1">
    </div>
 <div class="filtro-rango">
     <label for="contraste">CONTRASTE</label>
-    <input type="range">
+    <input type="range" id="contraste" min="100" max="1000" value="100" step="1">
 </div>
 <div class="filtro-rango">
     <label for="desenfoque">DESENFOQUE</label>
-    <input type="range">
+    <input type="range" id="desenfoque" min="0" max="10" value="0" step="0.1">
 </div>
-<div class="filtro-rango
+<div class="filtro-rango">
 <label for="escala-de-grises">ESCALA DE GRISES</label>
-<input type="range">
+<input type="range" id="escala-grises" min="0" max="100" value="0" step="1">
 </div>
-<div class="filtro-rango
+<div class="filtro-rango">
 <label for="sepia">SEPIA</label>
-<input type="range">
+<input type="range" id="sepia" min="0" max="100" value="0" step="1">
 </div>
-<div class="filtro-rango
+<div class="filtro-rango">
 <label for="hue">HUE</label>
-<input type="range">
+<input type="range" id="hue" min="0" max="360" value="0" step="1">
 </div>
-<div class="filtro-rango
+<div class="filtro-rango">
 <label for="saturado">SATURADO</label>
-<input type="range">
+<input type="range" id="saturado" min="100" max="1000" value="100" step="10">
+</div>
+<div class="filtro-rango">
+<label for="negativo">NEGATIVO</label>
+<input type="range" id="negativo" min="0" max="1" value="0" step="0.1">
 </div>
 
 <button id="boton-reestablecer">REESTABLECER FILTROS</button>
