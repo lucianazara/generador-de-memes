@@ -44,6 +44,16 @@ let interlineado = $("#interlineado");
 let colorFondoMeme = $("#color-fondo");
 let efectoEstablecido = $("#efecto-preestablecido");
 let contenedorMeme = $(".contenedor-meme-imagen");
+let brillo = $("#brightness");
+let opacidad = $("#opacity");
+let contraste = $("#contrast");
+let desenfoque = $("#blur");
+let escalaGrises = $("#grayscale");
+let sepia = $("#sepia");
+let hue = $("#hue");
+let saturacion = $("#saturate");
+let negativo = $("#invert");
+let botonReestablecer = $("#boton-reestablecer");
 
 enlaceImagen.addEventListener("click", function() {
     panelImagen.classList.add("desplegar");
@@ -226,4 +236,63 @@ efectoEstablecido.addEventListener("change", function(event){
     }
 })
 
+
+//FILTROS
+brillo.addEventListener("change", function(event){
+    let brilloElegido = event.target.value;
+    memeImagen.style.filter = `brightness(${brilloElegido}`;
+})
+
+opacidad.addEventListener("change", function(event){
+    let opacidadElegida = event.target.value;
+    memeImagen.style.filter = `opacity(${opacidadElegida}`;
+})
+
+contraste.addEventListener("change", function(event){
+    let contrasteElegido = event.target.value;
+    memeImagen.style.filter = `contrast(${contrasteElegido}`;
+})
+
+desenfoque.addEventListener("change", function(event){
+    let desenfoqueElegido = event.target.value;
+    memeImagen.style.filter = `blur(${desenfoqueElegido}px`;
+})
+
+escalaGrises.addEventListener("change", function(event){
+    let escalaGrisesElegida = event.target.value;
+    memeImagen.style.filter = `grayscale(${escalaGrisesElegida}`;
+})
+
+sepia.addEventListener("change", function(event){
+    let sepiaElegido = event.target.value;
+    memeImagen.style.filter = `sepia(${sepiaElegido}`;
+})
+hue.addEventListener("change", function(event){
+    let hueElegido = event.target.value;
+    memeImagen.style.filter = `hue-rotate(${hueElegido}deg`;
+})
+
+saturacion.addEventListener("change", function(event){
+    let saturacionElegida = event.target.value;
+    memeImagen.style.filter = `saturate(${saturacionElegida}`;
+})
+
+negativo.addEventListener("change", function(event){
+    let negativoElegido = event.target.value;
+    memeImagen.style.filter = `invert(${negativoElegido}`;
+})
+
+//REESTABLECER FILTROS
+
+botonReestablecer.addEventListener("click", function(){
+    memeImagen.style.filter = `brightness(1)`;
+    memeImagen.style.filter = `opacity(100)`;
+    memeImagen.style.filter = `contrast(100)`;
+    memeImagen.style.filter = `blur(0)px`;
+    memeImagen.style.filter = `grayscale(0)`;
+    memeImagen.style.filter = `sepia(0)`;
+    memeImagen.style.filter = `hue-rotate(0deg`;
+    memeImagen.style.filter = `saturate(100)`;
+    memeImagen.style.filter = `invert(0)`;
+})
 
