@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
     <title>Editor de memes TP</title>
     <link rel="icon" type="image" href="img/favicon-32x32.png">
 </head>
@@ -20,7 +24,7 @@
     </nav>
 </header>
 <body>
-    <div class="meme-contenedor">
+    <section id="meme-contenedor">
     <div class="meme-generador">
         <div id= "contenedor-texto-superior" class="meme-generador-texto">
            <p id="parrafo-texto-superior">
@@ -37,8 +41,7 @@
     <div class="boton-contenedor">
         <button id="boton-descargar"><i class="fa-solid fa-download"></i> DESCARGAR</button>
     </div>
-   
-</div>
+    </section>
 
     <!-- SECCION IMAGEN -->
     <section id="panel-seccion-imagen">

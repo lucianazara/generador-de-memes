@@ -113,7 +113,7 @@ a:visited {
 
 /* SECCION MEME */
 
-.meme-contenedor{
+#meme-contenedor{
     display: flex;
     justify-content: center;
     align-items: center;

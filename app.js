@@ -14,6 +14,7 @@ let botonCerrarTexto = $("#boton-cerrar-texto");
 let botonCerrarImagen = $("#boton-cerrar-imagen");
 let menu = $(".menu");
 let imagenURL = $("#url");
+let memeContenedor = $("#meme-contenedor");
 let memeImagen = $(".meme-imagen");
 let textoSuperior = $("#meme-texto-superior");
 let textoInferior = $("#meme-texto-inferior");
@@ -54,6 +55,7 @@ let hue = $("#hue");
 let saturacion = $("#saturate");
 let negativo = $("#invert");
 let botonReestablecer = $("#boton-reestablecer");
+let botonDescargar = $("#boton-descargar");
 
 enlaceImagen.addEventListener("click", function() {
     panelImagen.classList.add("desplegar");
@@ -296,3 +298,11 @@ botonReestablecer.addEventListener("click", function(){
     memeImagen.style.filter = `invert(0)`;
 })
 
+//DESCARGAR MEME
+const descargarMeme = function(){
+    domtoimage.toBlob(contenedorMeme).then(function(blob){
+        saveAs(blob, "meme.png");
+    })
+}
+
+botonDescargar.addEventListener("click", descargarMeme);
