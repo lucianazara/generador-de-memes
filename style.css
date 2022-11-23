@@ -283,3 +283,41 @@ visibility: hidden;
     background-color: var(--color-hover);
 }
 
+#url {
+    padding: 3px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+
+/*TABLET*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    #meme-contenedor{
+        width: 80vw;
+        height: 60vh;
+        margin: 2rem;
+    }
+    
+  }
+
+  /*CELULAR*/
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    #meme-contenedor{
+        width: 50%;
+        height: 80vh;
+        margin: 2rem;
+    }
+
+    .seccion-imagen {
+        width: 50%;
+    }
+    
+    .seccion-texto {
+        width: 50%;
+    }
+  }
+
+  
