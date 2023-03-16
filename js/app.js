@@ -1,8 +1,10 @@
-let $ = (selector) => document.querySelector(selector);
-let $$ = (selector) => document.querySelectorAll(selector);
+const $ = selector => document.querySelector(selector);
+const $$ = selector => document.querySelectorAll(selector);
 
 let enlaceImagen = $("#imagen-nav");
 let panelImagen = $(".seccion-imagen");
+let botonAbrirImagen = $("#btn-abrir-imagen")
+let botonAbrirTexto= $("#btn-abrir-texto")
 let seccionImagen = $("#seccion-panel-imagen");
 let enlaceTexto = $("#texto-nav");
 let panelTexto = $(".seccion-texto");
@@ -57,14 +59,20 @@ let negativo = $("#invert");
 let botonReestablecer = $("#boton-reestablecer");
 let botonDescargar = $("#boton-descargar");
 
-enlaceImagen.addEventListener("click", function() {
-    panelImagen.classList.add("desplegar");
-    panelTexto.classList.remove("desplegar");
+botonAbrirImagen.addEventListener("click", () => {
+    if(seccionImagen.classList.contains("oculto")){
+        seccionImagen.style.display = "block"
+    } else {
+        seccionImagen.style.display = "none"
+    }      
 })
 
-enlaceTexto.addEventListener("click", function() {
-    panelTexto.classList.add("desplegar");
-    panelImagen.classList.remove("desplegar");
+botonAbrirTexto.addEventListener("click", () => {
+    if(seccionTexto.classList.contains("oculto")){
+        seccionTexto.style.display = "block"
+    } else {
+        seccionTexto.style.display = "none"
+    } 
 })
 
 window.addEventListener("load", function() {
@@ -82,23 +90,25 @@ botonModoOscuro.addEventListener("click", function(){
     }
 })
 
-
-panelImagen.addEventListener("click", function(){
-    seccionImagen.classList.add("desplegar");
-    })
-
-panelTexto.addEventListener("click", function(){
-    seccionTexto.classList.add("desplegar");
-    })
-
-// //BOTONES CERRAR
-// botonCerrarImagen.addEventListener("click", function(){
-//     seccionImagen.classList.add("ocultar");
+//este codigo TRAE PROBLEMAS
+// panelImagen.addEventListener("click", () => {
+//     seccionImagen.style.display = "none"
 // })
 
-// botonCerrarImagen.addEventListener("click", function(){
-//     seccionTexto.classList.add("ocultar");
-// })
+
+//este codigo TRAE PROBLEMAS
+// panelTexto.addEventListener("click", () =>{
+//     seccionTexto.style.display = "none"
+//     })
+
+//BOTONES CERRAR
+botonCerrarImagen.addEventListener("click", ()=> {
+    seccionImagen.style.display = "none"
+})
+
+botonCerrarTexto.addEventListener("click", ()=>{
+    seccionTexto.style.display = "none"
+})
 
 // AGREGAR IMAGEN
 

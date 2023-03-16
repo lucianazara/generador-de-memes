@@ -37,7 +37,8 @@
     --filtro-rango: var(--lila);
     --color-hover: var(--lila);
     --meme-texto: var(--blanco-lila);
-    --boton-descargar: var(--lila-claro);
+    --boton: var(--lila-claro);
+    --boton-borde: var(--violeta-vibrante);
     --boton-reestablecer: var(--blanco-lila);
 }
 
@@ -50,7 +51,8 @@
     --filtro-rango: var(--gris-super-oscuro);
     --meme-texto: var(--blanco-gris);
     --color-hover: var(--lila);
-    --boton-descargar: var(--lila-claro);
+    --boton: var(--lila-claro);
+    --boton-borde: var(--violeta);
     --boton-reestablecer: var(--blanco-lila);
 }
 
@@ -61,13 +63,12 @@ body {
 }
 
 
-
 h1 {
     text-align: center;
-    padding: 1rem;
+    margin-top: 1.5rem;
     display: inline-block;
     width: 100%;
-    height: 60%;
+    height: 25%;
     font-size: 2rem;
     color: var(--color-texto);
 
@@ -87,26 +88,27 @@ nav ul {
 nav ul li{
     list-style-type: none;
     display: inline-block;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
     justify-content: center;
     color: var(--color-texto);
 }
 
-nav ul li a {
-   text-decoration: none;
+
+.btn-nav {
+    margin: .5rem;
+    padding: 0.7rem;
+    background-color: var(--boton);
+    border-radius: 25px;
+    font-size: 1rem;
+    border: solid var(--boton-borde);
 }
 
-nav ul li:hover {
+.btn-nav:hover {
     background-color: var(--color-hover);
-    border-radius: 20px;
     transition: 1ms;
     cursor: pointer;
 }
-
-a:visited {
-    color: var(--color-texto);
-  }
 
 
 /* END OF NAV */
@@ -175,7 +177,9 @@ a:visited {
     width: 180px;
     height: 60px;
     border-radius: 30px;
-    background-color: var(--boton-descargar);
+    background-color: var(--boton);
+    border: none;
+    border: solid var(--boton-borde);
 }
 
 #boton-descargar:hover{
@@ -183,7 +187,6 @@ a:visited {
 }
 
 /* SECCION IMAGEN */
-
 
 .seccion-imagen {
     height: 100%;
@@ -196,10 +199,10 @@ a:visited {
     top: 0;
     align-self: flex-end;
     position: absolute;
-   visibility: hidden;
    background-color: var(--menu-imagen);
    color: var(--color-texto);
-  
+   /* visibility: hidden; */
+
 }
 
 .meme-imagen {
@@ -223,18 +226,18 @@ right: 0;
 top: 0;
 align-self: flex-end;
 position: absolute;
-visibility: hidden;
 background-color: var(--menu-texto);
 color: var(--color-texto);
-visibility: hidden;
+/* visibility: hidden; */
 
 }
 
 .desplegar {
     visibility: visible;
+    
 }
 
-.ocultar {
+.oculto {
  display: none;
 }
 
@@ -249,6 +252,11 @@ visibility: hidden;
     font-weight: 1200;
 }
 
+.texto {
+    padding: .5rem;
+    border-radius: 10px;
+    margin: .2rem;
+}
 .meme-generador-texto {
     color: black;
     text-align: center;

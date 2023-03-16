@@ -17,9 +17,9 @@
     <nav>
         <h1>Generador de Memes</h1>
         <ul>
-            <li><a id="imagen-nav" href="###">Imagen</a></li>
-            <li><a id="texto-nav" href="###">Texto</a></li>
-            <li id="modo-oscuro">Modo oscuro</li>
+            <li><button id="btn-abrir-imagen" class="btn-nav">Imagen</button></li>
+            <li><button id="btn-abrir-texto" class="btn-nav" >Texto</button></li>
+            <li><button id="modo-oscuro" class="btn-nav">Modo oscuro</button></li>
         </ul>
     </nav>
 </header>
@@ -44,7 +44,7 @@
     </section>
 
     <!-- SECCION IMAGEN -->
-    <section id="panel-seccion-imagen">
+    <section id="seccion-panel-imagen" class="oculto">
     <div class="seccion-imagen">
         <h2>IMAGEN</h2>
         <button class="boton-cerrar" id="boton-cerrar-imagen">
@@ -110,7 +110,7 @@
     <!-- FIN SECCION IMAGEN -->
 
     <!-- SECCION TEXTO -->
-    <section id="seccion-panel-texto">
+    <section id="seccion-panel-texto" class ="oculto">
     <div class="seccion-texto">
     <h2>TEXTO</h2>
     <button class="boton-cerrar" id="boton-cerrar-texto">
@@ -119,13 +119,13 @@
     <form>
         <div class="texto-menu">
             <label for="superior">SUPERIOR</label>
-            <textarea id="texto-superior" cols="30" rows="3">TEXTO SUPERIOR</textarea>
+            <textarea id="texto-superior" class="texto" cols="30" rows="3">TEXTO SUPERIOR</textarea>
             <input id="sin-texto-superior" type="checkbox">
             <label for="sin-texto-superior">Sin texto superior</label>
         </div>
       <div class="texto-menu">
         <label for="inferior">BOTTOM TEXT</label>
-        <textarea id="texto-inferior" cols="30" rows="3">TEXTO INFERIOR</textarea>
+        <textarea id="texto-inferior" class="texto" cols="30" rows="3">TEXTO INFERIOR</textarea>
         <input id="sin-texto-inferior" type="checkbox">
         <label>Sin texto inferior</label>
       </div>
@@ -194,5 +194,5 @@
 </section>
 
 </body>
-<script src="app.js"></script>
+<script src="js/app.js"></script>
 </html>
