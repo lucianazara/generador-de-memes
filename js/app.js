@@ -44,7 +44,7 @@ let espaciado = $("#espaciado");
 let interlineado = $("#interlineado");
 
 //VARIABLES SECCION IMAGEN
-let colorFondoMeme = $("#color-fondo");
+let colorFondoMeme = $("#color-fondo-meme");
 let efectoEstablecido = $("#efecto-preestablecido");
 let contenedorMeme = $(".contenedor-meme-imagen");
 let brillo = $("#brightness");
@@ -60,7 +60,8 @@ let botonReestablecer = $("#boton-reestablecer");
 let botonDescargar = $("#boton-descargar");
 
 botonAbrirImagen.addEventListener("click", () => {
-    if(seccionImagen.classList.contains("oculto")){
+    if(seccionImagen.classList.contains("oculto") || seccionTexto.style.display === "block" ){
+        seccionTexto.style.display = "none"
         seccionImagen.style.display = "block"
     } else {
         seccionImagen.style.display = "none"
@@ -68,18 +69,19 @@ botonAbrirImagen.addEventListener("click", () => {
 })
 
 botonAbrirTexto.addEventListener("click", () => {
-    if(seccionTexto.classList.contains("oculto")){
+    if(seccionTexto.classList.contains("oculto")  || seccionImagen.style.display === "block"){
+        seccionImagen.style.display = "none"
         seccionTexto.style.display = "block"
     } else {
         seccionTexto.style.display = "none"
     } 
 })
 
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
     document.body.classList.add("modo-oscuro");
 })
 
-botonModoOscuro.addEventListener("click", function(){
+botonModoOscuro.addEventListener("click", () => {
     document.body.classList.add("modo-claro");
     if(botonModoOscuro.innerHTML == "Modo oscuro"){
         document.body.classList.add("modo-claro");
@@ -90,66 +92,56 @@ botonModoOscuro.addEventListener("click", function(){
     }
 })
 
-//este codigo TRAE PROBLEMAS
-// panelImagen.addEventListener("click", () => {
-//     seccionImagen.style.display = "none"
-// })
-
-
-//este codigo TRAE PROBLEMAS
-// panelTexto.addEventListener("click", () =>{
-//     seccionTexto.style.display = "none"
-//     })
 
 //BOTONES CERRAR
-botonCerrarImagen.addEventListener("click", ()=> {
+botonCerrarImagen.addEventListener("click", () => {
     seccionImagen.style.display = "none"
 })
 
-botonCerrarTexto.addEventListener("click", ()=>{
+botonCerrarTexto.addEventListener("click", () =>{
     seccionTexto.style.display = "none"
 })
 
 // AGREGAR IMAGEN
 
-imagenURL.addEventListener("input", function(event){
+imagenURL.addEventListener("input", event => {
   let url = event.target.value;
   memeImagen.style.backgroundImage = `url(${url})`;
 })
 
 // MODIFICAR TEXTOS
-inputTextoSuperior.addEventListener("input", function(event){
+inputTextoSuperior.addEventListener("input", event => {
     parrafoTextoSuperior.innerText = event.target.value;
 })
 
-inputTextoInferior.addEventListener("input", function(event){
+inputTextoInferior.addEventListener("input", event => {
     parrafoTextoInferior.innerText = event.target.value;
 })
 
 // OCULTAR TEXTOS
-sinTextoSuperior.addEventListener("click", function(){
-    contenedorTextoSuperior.classList.toggle("ocultar");
+sinTextoSuperior.addEventListener("click", () => {
+    contenedorTextoSuperior.classList.toggle("oculto");
 })
 
-sinTextoInferior.addEventListener("click", function(){
-    contenedorTextoInferior.classList.toggle("ocultar");
+sinTextoInferior.addEventListener("click", () => {
+    contenedorTextoInferior.classList.toggle("oculto");
 })
 
 // CAMBIAR TIPOGRAFIA
 
-tipografia.addEventListener("change", function(event){
+tipografia.addEventListener("change", event => {
     let tipografiaElegida = event.target.value;
     parrafoTextoSuperior.style.fontFamily = tipografiaElegida;
     parrafoTextoInferior.style.fontFamily = tipografiaElegida;
 })
 
-tipografia.addEventListener("change", function(event){
+tipografia.addEventListener("change", event =>{
     let tipografiaElegida = event.target.value;
     parrafoTextoSuperior.style.fontFamily = tipografiaElegida;
     parrafoTextoInferior.style.fontFamily = tipografiaElegida;
 })
 
-tamanoFuente.addEventListener("input", function(event){
+tamanoFuente.addEventListener("input", event =>{
     let tamanoFuenteElegido = event.target.value;
     parrafoTextoSuperior.style.fontSize = `${tamanoFuenteElegido}px`;
     parrafoTextoInferior.style.fontSize = `${tamanoFuenteElegido}px`;
@@ -157,34 +149,34 @@ tamanoFuente.addEventListener("input", function(event){
 
 // ALINEACION DE TEXTO
 
-botonIzquierda.addEventListener("click", function(event){
+botonIzquierda.addEventListener("click", () =>{
     parrafoTextoSuperior.style.textAlign = "left";
 })
 
-botonCentro.addEventListener("click", function(event){
+botonCentro.addEventListener("click", () =>{
     parrafoTextoSuperior.style.textAlign = "center";
 })
 
-botonDerecha.addEventListener("click", function(event){
+botonDerecha.addEventListener("click", () =>{
     parrafoTextoSuperior.style.textAlign = "right";
 })
 
 //CAMBIAR COLOR
 
-colorTexto.addEventListener("input", function(event){
+colorTexto.addEventListener("input", event =>{
     let colorElegidoTexto = event.target.value;
     parrafoTextoSuperior.style.color = colorElegidoTexto;
     parrafoTextoInferior.style.color = colorElegidoTexto;
 })
 
-colorFondo.addEventListener("change", function(event){
+colorFondo.addEventListener("change", event =>{
     let colorElegidoFondo = event.target.value;
     contenedorTextoSuperior.style.backgroundColor = colorElegidoFondo;
     contenedorTextoInferior.style.backgroundColor= colorElegidoFondo;
 })
 
 // FONDO TRANSPARENTE
-fondoTransparente.addEventListener("click", function(){
+fondoTransparente.addEventListener("click", () => {
        parrafoTextoSuperior.classList.add("fondo-transparente");
         contenedorTextoSuperior.classList.add("ocultar");
         parrafoTextoSuperior.classList.add("fondo-transparente");
@@ -193,20 +185,20 @@ fondoTransparente.addEventListener("click", function(){
 })
 
 // CONTORNO 
-botonContornoClaro.addEventListener("click", function(){
+botonContornoClaro.addEventListener("click", () => {
     parrafoTextoSuperior.classList.toggle("contorno-claro");
     parrafoTextoInferior.classList.toggle("contorno-claro");
 
 })
 
-botonContornoOscuro.addEventListener("click", function(){
+botonContornoOscuro.addEventListener("click", () => {
     parrafoTextoSuperior.classList.toggle("contorno-oscuro");
     parrafoTextoInferior.classList.toggle("contorno-oscuro");
 
 })
 
 //ESPACIADO
-espaciado.addEventListener("input", function(event){
+espaciado.addEventListener("input", event => {
     let espaciadoElegido = event.target.value;
     contenedorTextoSuperior.style.paddingTop = `${espaciadoElegido}px`;
     contenedorTextoSuperior.style.paddingBottom = `${espaciadoElegido}px`;
@@ -216,14 +208,14 @@ espaciado.addEventListener("input", function(event){
 
 //INTERLINEADO
 
-interlineado.addEventListener("click", function(event){
+interlineado.addEventListener("click", event => {
     parrafoTextoSuperior.style.lineHeight = `${event.target.value}px`;
     parrafoTextoInferior.style.lineHeight = `${event.target.value}px`;
 })
 
 //SECCION IMAGEN
 
-colorFondoMeme.addEventListener("input", function(event){
+colorFondoMeme.addEventListener("input", event => {
     let colorFondoMemeElegido = event.target.value;
     memeImagen.style.backgroundColor = colorFondoMemeElegido;
 })
@@ -231,7 +223,7 @@ colorFondoMeme.addEventListener("input", function(event){
 
 //EFECTO DE FONDO
 
-efectoEstablecido.addEventListener("change", function(event){
+efectoEstablecido.addEventListener("change", event => {
  let efecto = event.target.value;
     if(efecto == "Ninguno"){
         contenedorMeme.style.backgroundBlendMode = "normal";
@@ -250,53 +242,53 @@ efectoEstablecido.addEventListener("change", function(event){
 
 
 //FILTROS
-brillo.addEventListener("change", function(event){
+brillo.addEventListener("change", event => {
     let brilloElegido = event.target.value;
     memeImagen.style.filter = `brightness(${brilloElegido}`;
 })
 
-opacidad.addEventListener("change", function(event){
+opacidad.addEventListener("change", event => {
     let opacidadElegida = event.target.value;
     memeImagen.style.filter = `opacity(${opacidadElegida}`;
 })
 
-contraste.addEventListener("change", function(event){
+contraste.addEventListener("change", event => {
     let contrasteElegido = event.target.value;
     memeImagen.style.filter = `contrast(${contrasteElegido}`;
 })
 
-desenfoque.addEventListener("change", function(event){
+desenfoque.addEventListener("change", event => {
     let desenfoqueElegido = event.target.value;
     memeImagen.style.filter = `blur(${desenfoqueElegido}px`;
 })
 
-escalaGrises.addEventListener("change", function(event){
+escalaGrises.addEventListener("change", event => {
     let escalaGrisesElegida = event.target.value;
     memeImagen.style.filter = `grayscale(${escalaGrisesElegida}`;
 })
 
-sepia.addEventListener("change", function(event){
+sepia.addEventListener("change", event => {
     let sepiaElegido = event.target.value;
     memeImagen.style.filter = `sepia(${sepiaElegido}`;
 })
-hue.addEventListener("change", function(event){
+hue.addEventListener("change", event => {
     let hueElegido = event.target.value;
     memeImagen.style.filter = `hue-rotate(${hueElegido}deg`;
 })
 
-saturacion.addEventListener("change", function(event){
+saturacion.addEventListener("change", event => {
     let saturacionElegida = event.target.value;
     memeImagen.style.filter = `saturate(${saturacionElegida}`;
 })
 
-negativo.addEventListener("change", function(event){
+negativo.addEventListener("change", event => {
     let negativoElegido = event.target.value;
     memeImagen.style.filter = `invert(${negativoElegido}`;
 })
 
 //REESTABLECER FILTROS
 
-botonReestablecer.addEventListener("click", function(){
+botonReestablecer.addEventListener("click", () =>{
     memeImagen.style.filter = `brightness(1)`;
     memeImagen.style.filter = `opacity(100)`;
     memeImagen.style.filter = `contrast(100)`;
@@ -309,7 +301,7 @@ botonReestablecer.addEventListener("click", function(){
 })
 
 //DESCARGAR MEME
-const descargarMeme = function(){
+const descargarMeme = () => {
     domtoimage.toBlob(contenedorMeme).then(function(blob){
         saveAs(blob, "meme.png");
     })

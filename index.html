@@ -18,7 +18,7 @@
         <h1>Generador de Memes</h1>
         <ul>
             <li><button id="btn-abrir-imagen" class="btn-nav">Imagen</button></li>
-            <li><button id="btn-abrir-texto" class="btn-nav" >Texto</button></li>
+            <li><button id="btn-abrir-texto" class="btn-nav">Texto</button></li>
             <li><button id="modo-oscuro" class="btn-nav">Modo oscuro</button></li>
         </ul>
     </nav>
@@ -51,11 +51,14 @@
             <i class="fa fa-times"></i>
         </button>
         <form>
-            <label for="URL"></label><br>
-            <input type="text" id="url" name="url"><br>
+            <label for="URL">
+                <h3>URL</h3>
+            </label><br>
+            <input type="text" id="url" name="url" placeholder="Ingrese la URL de la imagen"><br>
             </form>
             <h3>FONDO</h3>
-            <input id="color-fondo" type="color">
+            <div id="seleccion-color-fondo">
+            <input id="color-fondo-meme" value="#dbb2ff" type="color">
             <form>
             <select id="efecto-preestablecido">
                 <option value="Ninguno">Ninguno</option>
@@ -65,6 +68,8 @@
                 <option value="Luminosidad">Luminosidad</option>
                 <option value="Multiplicar">Multiplicar</option>
             </select>
+            </form>
+            </div>
 <h3>FILTROS</h3>
 <div class="filtro-rango">
     <label for="brillo">BRILLO</label>
@@ -189,7 +194,6 @@
 
     </form>
 
-    
 </div>
 </section>
 
