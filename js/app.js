@@ -17,6 +17,7 @@ let botonCerrarImagen = $("#boton-cerrar-imagen");
 let menu = $(".menu");
 let imagenURL = $("#url");
 let memeContenedor = $("#meme-contenedor");
+let memeGenerador = $("#meme-generador")
 let memeImagen = $(".meme-imagen");
 let textoSuperior = $("#meme-texto-superior");
 let textoInferior = $("#meme-texto-inferior");
@@ -193,118 +194,118 @@ botonContornoClaro.addEventListener("click", () => {
 
 botonContornoOscuro.addEventListener("click", () => {
     parrafoTextoSuperior.classList.toggle("contorno-oscuro");
-    parrafoTextoInferior.classList.toggle("contorno-oscuro");
+    parrafoTextoInferior.classList.toggle("contorno-oscuro")
 
 })
 
 //ESPACIADO
 espaciado.addEventListener("input", event => {
-    let espaciadoElegido = event.target.value;
-    contenedorTextoSuperior.style.paddingTop = `${espaciadoElegido}px`;
-    contenedorTextoSuperior.style.paddingBottom = `${espaciadoElegido}px`;
-    contenedorTextoInferior.style.paddingTop = `${espaciadoElegido}px`;
-    contenedorTextoInferior.style.paddingBottom= `${espaciadoElegido}px`;
+    let espaciadoElegido = event.target.value
+    contenedorTextoSuperior.style.paddingTop = `${espaciadoElegido}px`
+    contenedorTextoSuperior.style.paddingBottom = `${espaciadoElegido}px`
+    contenedorTextoInferior.style.paddingTop = `${espaciadoElegido}px`
+    contenedorTextoInferior.style.paddingBottom= `${espaciadoElegido}px`
 })
 
 //INTERLINEADO
 
 interlineado.addEventListener("click", event => {
-    parrafoTextoSuperior.style.lineHeight = `${event.target.value}px`;
-    parrafoTextoInferior.style.lineHeight = `${event.target.value}px`;
+    parrafoTextoSuperior.style.lineHeight = `${event.target.value}px`
+    parrafoTextoInferior.style.lineHeight = `${event.target.value}px`
 })
 
 //SECCION IMAGEN
 
 colorFondoMeme.addEventListener("input", event => {
-    let colorFondoMemeElegido = event.target.value;
-    memeImagen.style.backgroundColor = colorFondoMemeElegido;
+    let colorFondoMemeElegido = event.target.value
+    memeImagen.style.backgroundColor = colorFondoMemeElegido
 })
 
 
 //EFECTO DE FONDO
 
 efectoEstablecido.addEventListener("change", event => {
- let efecto = event.target.value;
+ let efecto = event.target.value
     if(efecto == "Ninguno"){
-        contenedorMeme.style.backgroundBlendMode = "normal";
+        contenedorMeme.style.backgroundBlendMode = "normal"
     }else if(efecto == "Aclarar"){
-        memeImagen.style.backgroundBlendMode = "lighten";
+        memeImagen.style.backgroundBlendMode = "lighten"
     }else if(efecto == "Oscurecer"){
-        memeImagen.style.backgroundBlendMode = "darken";
+        memeImagen.style.backgroundBlendMode = "darken"
     }else if(efecto == "Luminosidad"){
-        memeImagen.style.backgroundBlendMode = "luminosity";
+        memeImagen.style.backgroundBlendMode = "luminosity"
     }else if(efecto == "Diferencia"){
-       memeImagen.style.backgroundBlendMode = "difference";
+       memeImagen.style.backgroundBlendMode = "difference"
     }else if(efecto == "Multiplicar"){
-        memeImagen.style.backgroundBlendMode = "multiply";
+        memeImagen.style.backgroundBlendMode = "multiply"
     }
 })
 
 
 //FILTROS
 brillo.addEventListener("change", event => {
-    let brilloElegido = event.target.value;
-    memeImagen.style.filter = `brightness(${brilloElegido}`;
+    let brilloElegido = event.target.value
+    memeImagen.style.filter = `brightness(${brilloElegido}`
 })
 
 opacidad.addEventListener("change", event => {
-    let opacidadElegida = event.target.value;
-    memeImagen.style.filter = `opacity(${opacidadElegida}`;
+    let opacidadElegida = event.target.value
+    memeImagen.style.filter = `opacity(${opacidadElegida}`
 })
 
 contraste.addEventListener("change", event => {
-    let contrasteElegido = event.target.value;
-    memeImagen.style.filter = `contrast(${contrasteElegido}`;
+    let contrasteElegido = event.target.value
+    memeImagen.style.filter = `contrast(${contrasteElegido}`
 })
 
 desenfoque.addEventListener("change", event => {
-    let desenfoqueElegido = event.target.value;
-    memeImagen.style.filter = `blur(${desenfoqueElegido}px`;
+    let desenfoqueElegido = event.target.value
+    memeImagen.style.filter = `blur(${desenfoqueElegido}px`
 })
 
 escalaGrises.addEventListener("change", event => {
-    let escalaGrisesElegida = event.target.value;
-    memeImagen.style.filter = `grayscale(${escalaGrisesElegida}`;
+    let escalaGrisesElegida = event.target.value
+    memeImagen.style.filter = `grayscale(${escalaGrisesElegida}`
 })
 
 sepia.addEventListener("change", event => {
-    let sepiaElegido = event.target.value;
-    memeImagen.style.filter = `sepia(${sepiaElegido}`;
+    let sepiaElegido = event.target.value
+    memeImagen.style.filter = `sepia(${sepiaElegido}`
 })
 hue.addEventListener("change", event => {
-    let hueElegido = event.target.value;
-    memeImagen.style.filter = `hue-rotate(${hueElegido}deg`;
+    let hueElegido = event.target.value
+    memeImagen.style.filter = `hue-rotate(${hueElegido}deg`
 })
 
 saturacion.addEventListener("change", event => {
-    let saturacionElegida = event.target.value;
-    memeImagen.style.filter = `saturate(${saturacionElegida}`;
+    let saturacionElegida = event.target.value
+    memeImagen.style.filter = `saturate(${saturacionElegida}`
 })
 
 negativo.addEventListener("change", event => {
-    let negativoElegido = event.target.value;
-    memeImagen.style.filter = `invert(${negativoElegido}`;
+    let negativoElegido = event.target.value
+    memeImagen.style.filter = `invert(${negativoElegido}`
 })
 
 //REESTABLECER FILTROS
 
 botonReestablecer.addEventListener("click", () =>{
-    memeImagen.style.filter = `brightness(1)`;
-    memeImagen.style.filter = `opacity(100)`;
-    memeImagen.style.filter = `contrast(100)`;
-    memeImagen.style.filter = `blur(0)px`;
-    memeImagen.style.filter = `grayscale(0)`;
-    memeImagen.style.filter = `sepia(0)`;
-    memeImagen.style.filter = `hue-rotate(0deg`;
-    memeImagen.style.filter = `saturate(100)`;
-    memeImagen.style.filter = `invert(0)`;
+    memeImagen.style.filter = `brightness(1)`
+    memeImagen.style.filter = `opacity(100)`
+    memeImagen.style.filter = `contrast(100)`
+    memeImagen.style.filter = `blur(0)px`
+    memeImagen.style.filter = `grayscale(0)`
+    memeImagen.style.filter = `sepia(0)`
+    memeImagen.style.filter = `hue-rotate(0deg`
+    memeImagen.style.filter = `saturate(100)`
+    memeImagen.style.filter = `invert(0)`
 })
 
 //DESCARGAR MEME
 const descargarMeme = () => {
-    domtoimage.toBlob(contenedorMeme).then(function(blob){
-        saveAs(blob, "meme.png");
+    domtoimage.toBlob(memeGenerador).then(function(blob){
+        saveAs(blob, "meme.png")
     })
 }
 
-botonDescargar.addEventListener("click", descargarMeme);
+botonDescargar.addEventListener("click", descargarMeme)

@@ -131,7 +131,7 @@ nav ul li{
     background-size: cover;
 
 }
-.meme-generador {
+#meme-generador {
     display: flex;
     flex-direction: column;
     justify-content: center;
