@@ -10,52 +10,70 @@
 
 :root {
     --negro: rgb(18, 18, 18);
+    --azul: rgb(20, 125, 245);
     --azul-oscuro: rgb(35, 3, 106);
     --azul-medio: rgb(48, 0, 156);
     --azul-claro: rgb(55, 0, 179);
     --violeta-azulado: rgb(86, 0, 232);
-    --violeta-vibrante: rgb(98, 0, 238);
+    --violeta-vibrante: rgb(88, 10, 255);
+    --violeta-oscuro: rgb(80, 16, 219);
     --violeta: rgb(98, 0, 238);
     --lila-oscuro: rgb(152, 94, 255);
     --lila: rgb(187, 134, 252);
     --lila-claro: rgb(219, 178, 255);
+    --lila-vibrante: rgb(190, 10, 255);
     --blanco-lila: rgb(242, 231, 254);
     --blanco-gris: rgb(248, 249, 250);
     --gris-claro: rgb(233, 236, 239);
-    --gris-medio: rgb(206, 212, 218);
+    --gris-medio: #ced4da;
     --gris-oscuro: rgb(173, 181, 189);
     --gris-super-oscuro: rgb(52, 58, 64);
     --negro-gris: rgb(33, 37, 41);
+    --amarillo: rgb(222, 255, 10);
+    --naranja: rgb(255, 135, 0);
+    --naranja-amarillento: rgb(255, 211, 0);
+    --verde: rgb(161, 255, 10);
+    --verde-azulado: rgb(10, 255, 153);
+    --celeste: rgb(10, 239, 255);
+    --rojo: rgb(255, 0, 0);
 }
 
 .modo-oscuro {
-    --color-fondo: var(--azul-oscuro);
+    --color-fondo: var(--violeta-vibrante);
     --color-texto: var(--blanco-lila);
+    --color-texto-claro: var(--blanco-gris);
     --color-placeholder: var(--negro);
     --nav-color: var(--negro);
-    --menu-imagen: var(--violeta-azulado);
-    --menu-texto: var(--violeta-azulado);
+    --menu-imagen: var(--azul);
+    --menu-texto: var(--lila-vibrante);
     --filtro-rango: var(--lila);
     --color-hover: var(--lila);
     --meme-texto: var(--blanco-lila);
     --boton: var(--lila-claro);
     --boton-borde: var(--violeta-vibrante);
     --boton-reestablecer: var(--blanco-lila);
+    --background-nav: url(img/cheems-dark-mode.png);
+    --boton-descargar: var(--celeste);
 }
 
+
+
 .modo-claro {
-    --color-fondo: var(--gris-claro);
+    --color-fondo: var(--amarillo);
     --color-texto: var(--negro-gris);
     --color-placeholder: var(--negro);
-    --nav-color: var(--gris-medio);
-    --menu-imagen: var(--gris-oscuro);
-    --menu-texto: var(--gris-oscuro);
-    --filtro-rango: var(--gris-super-oscuro);
+    --color-texto-panel: var(blanco-gris);
+    --nav-color: var(--naranja);
+    --menu-imagen: var(--lila-vibrante);
+    --menu-texto: var(--celeste);
+    --filtro-rango: var(--rojo);
     --meme-texto: var(--blanco-gris);
-    --color-hover: var(--lila);
-    --boton: var(--lila-claro);
-    --boton-borde: var(--violeta);
+    --color-hover: var(--verde-azulado);
+    --boton: var(--verde);
+    --boton-borde: var(--verde-azulado);
     --boton-reestablecer: var(--blanco-lila);
+    --background-nav: url(img/cheems-light-mode.png);
+    --boton-descargar: var(--naranja);
 }
 
 body {
@@ -83,6 +101,9 @@ nav {
     /* display: flex; */
     height: 130px;
     background-color: var(--nav-color);
+    background-image: var(--background-nav);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 nav ul {
@@ -168,6 +189,9 @@ nav ul li{
 
 .filtro-rango {
     accent-color: var(--filtro-rango);
+    padding: .2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -183,7 +207,7 @@ nav ul li{
     width: 180px;
     height: 60px;
     border-radius: 30px;
-    background-color: var(--boton);
+    background-color: var(--boton-descargar);
     border: none;
     border: solid var(--boton-borde);
 }
@@ -206,7 +230,7 @@ nav ul li{
     align-self: flex-end;
     position: absolute;
    background-color: var(--menu-imagen);
-   color: var(--color-texto);
+   color: var(--color-texto-claro);
 
 }
 
@@ -236,10 +260,61 @@ color: var(--color-texto);
 
 }
 
+.label-texto {
+    font-size: 1.2rem;
+    margin: .5rem;
+    padding: .2rem;
+    font-weight: 600;
+}
+
+.sin-texto {
+    margin: .4rem;
+}
+
 .oculto {
  display: none;
 }
 
+#tipografia {
+    width: 100%;
+    padding: .3rem 0;
+    margin: .3rem 0;
+    border-radius: 10px;
+}
+
+.botones-alineacion {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn-alineacion {
+    padding: .2rem;
+    font-size: 1rem;
+}
+
+.btn-alineacion:hover {
+    background-color: var(--color-hover);
+}
+
+#tamanio-alineado {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: .2rem 0;
+    height: 100%;
+    width: 100%;
+}
+
+#tamano-fuente {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    padding: .2rem;
+}
+
+.fas {
+    padding: .3rem;
+}
 
 .boton-cerrar {
     position: fixed;
@@ -256,6 +331,15 @@ color: var(--color-texto);
 
 .boton-cerrar:hover {
     background-color: var(--boton);
+}
+
+.colores {
+    display: flex;
+    gap: 20px;
+}
+.color-seccion-texto {
+    display: flex;
+    flex-direction: column;
 }
 
 .texto {
@@ -366,6 +450,10 @@ input::placeholder{
     
     .seccion-texto {
         width: 50%;
+    }
+
+    nav {
+        background-image: none;
     }
   }
 

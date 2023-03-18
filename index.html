@@ -123,19 +123,19 @@
     </button>
     <form>
         <div class="texto-menu">
-            <label for="superior">SUPERIOR</label>
+            <label for="superior" class="label-texto">SUPERIOR</label>
             <textarea id="texto-superior" class="texto" cols="30" rows="3">TEXTO SUPERIOR</textarea>
-            <input id="sin-texto-superior" type="checkbox">
-            <label for="sin-texto-superior">Sin texto superior</label>
+            <input id="sin-texto-superior" class="sin-texto" type="checkbox">
+            <label for="sin-texto-superior" >Sin texto superior</label>
         </div>
       <div class="texto-menu">
-        <label for="inferior">BOTTOM TEXT</label>
+        <label for="inferior" class="label-texto">INFERIOR</label>
         <textarea id="texto-inferior" class="texto" cols="30" rows="3">TEXTO INFERIOR</textarea>
-        <input id="sin-texto-inferior" type="checkbox">
-        <label>Sin texto inferior</label>
+        <input id="sin-texto-inferior" class="sin-texto" type="checkbox">
+        <label for="sin-texto-superior">Sin texto inferior</label>
       </div>
       <div class="texto-menu">
-<label for="tipografia">FUENTE</label>
+<label for="tipografia" class="label-texto">FUENTE</label>
 <select id="tipografia">
     <option value="Arial" id="Arial">Arial</option>
     <option value="arial-black" font-family:Arial Black>Arial Black</option>
@@ -147,7 +147,7 @@
     <option value="verdana">Verdana</option>
     <option value="times new roman">Times New Roman</option>
 </select>
-      </div>
+<div id="tamanio-alineado">
       <div class="texto-menu">
         <input type="number" id="tamano-fuente" name="Tamaño de fuente"
      min="12" value="40">
@@ -157,9 +157,11 @@
         <button class="btn-alineacion" id="btn-centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
         <button class="btn-alineacion" id="btn-derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
       </div>
-
+    </div>
+</div>
       <div class="texto-menu">
       <div class="colores">
+        <div id="color-seccion-texto">
         <label for="color">Color</label>
         <input id="color-texto" type="color">
         <label for="fondo">Fondo</label>
@@ -170,7 +172,7 @@
     </div>
 
     <div class="texto-menu">
-        <label for="contorno">CONTORNO</label>
+        <label for="contorno" class="label-texto">CONTORNO</label>
         <div class="botones-contorno">
             <button>Ninguno</button>
             <button id="btn-contorno-claro">Claro</button>
@@ -179,11 +181,11 @@
     </div>
 
     <div class="texto-menu">
-    <label for="espaciado">ESPACIADO</label>
+    <label for="espaciado" class="label-texto">ESPACIADO</label>
     <input type="number" id="espaciado" name="espaciado" min="10" max="60" value="30">
     </div>
 
-    <label for="">INTERLINEADO</label>
+    <label for="interlineado" class="label-texto" >INTERLINEADO</label>
     <select id="interlineado">
         <option value="0.8">0.8</option>
         <option value="1">1</option>

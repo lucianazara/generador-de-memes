@@ -164,13 +164,13 @@ botonDerecha.addEventListener("click", () =>{
 
 //CAMBIAR COLOR
 
-colorTexto.addEventListener("input", event =>{
+colorTexto.addEventListener("input", event => {
     let colorElegidoTexto = event.target.value;
     parrafoTextoSuperior.style.color = colorElegidoTexto;
     parrafoTextoInferior.style.color = colorElegidoTexto;
 })
 
-colorFondo.addEventListener("change", event =>{
+colorFondo.addEventListener("change", event => {
     let colorElegidoFondo = event.target.value;
     contenedorTextoSuperior.style.backgroundColor = colorElegidoFondo;
     contenedorTextoInferior.style.backgroundColor= colorElegidoFondo;
