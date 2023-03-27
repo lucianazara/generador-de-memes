@@ -4,4 +4,5 @@ Generador de memes hecho en HTML, CSS y JavaScript. Este proyecto forma parte de
 ![image](https://user-images.githubusercontent.com/55200459/228071067-99a8f743-865c-46fa-a53b-cb2d057385c3.png)
 ![image](https://user-images.githubusercontent.com/55200459/228068787-d6e7fb31-97fe-4c45-a585-6ad9d621bdea.png)
 ![image](https://user-images.githubusercontent.com/55200459/228067077-2659906f-9dda-43dc-a3f9-4ce60355ae79.png)
+![image](https://user-images.githubusercontent.com/55200459/228071347-7edbf462-f1fc-4eee-8261-b69bafca995e.png)
 ![image](https://user-images.githubusercontent.com/55200459/228069029-8ad875ba-5ab7-4a41-9cb0-2b8101ca6bb7.png)
