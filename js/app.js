@@ -107,7 +107,7 @@ botonCerrarTexto.addEventListener("click", () =>{
 // AGREGAR IMAGEN
 
 imagenURL.addEventListener("input", event => {
-  const url = event.target.value
+    let url = event.target.value
   memeImagen.style.backgroundImage = `url(${url})`
 })
 
@@ -132,19 +132,19 @@ sinTextoInferior.addEventListener("click", () => {
 // CAMBIAR TIPOGRAFIA
 
 tipografia.addEventListener("change", event => {
-    const tipografiaElegida = event.target.value
+    let tipografiaElegida = event.target.value
     parrafoTextoSuperior.style.fontFamily = tipografiaElegida
     parrafoTextoInferior.style.fontFamily = tipografiaElegida
 })
 
 tipografia.addEventListener("change", event =>{
-    const tipografiaElegida = event.target.value
+    let tipografiaElegida = event.target.value
     parrafoTextoSuperior.style.fontFamily = tipografiaElegida
     parrafoTextoInferior.style.fontFamily = tipografiaElegida
 })
 
 tamanoFuente.addEventListener("input", event =>{
-    const tamanoFuenteElegido = event.target.value
+    let tamanoFuenteElegido = event.target.value
     parrafoTextoSuperior.style.fontSize = `${tamanoFuenteElegido}px`
     parrafoTextoInferior.style.fontSize = `${tamanoFuenteElegido}px`
 })
@@ -152,7 +152,7 @@ tamanoFuente.addEventListener("input", event =>{
 // ALINEACION DE TEXTO
 
 botonIzquierda.addEventListener("click", event =>{
-    const alineacionElegida = event.target.value
+    let alineacionElegida = event.target.value
     parrafoTextoSuperior.style.textAlign = `${alineacionElegida}`
 })
 
@@ -167,13 +167,13 @@ botonDerecha.addEventListener("click", () =>{
 //CAMBIAR COLOR
 
 colorTexto.addEventListener("input", event => {
-    const colorElegidoTexto = event.target.value
+    let colorElegidoTexto = event.target.value
     parrafoTextoSuperior.style.color = colorElegidoTexto
     parrafoTextoInferior.style.color = colorElegidoTexto
 })
 
 colorFondo.addEventListener("change", event => {
-    const colorElegidoFondo = event.target.value
+    let colorElegidoFondo = event.target.value
     contenedorTextoSuperior.style.backgroundColor = colorElegidoFondo
     contenedorTextoInferior.style.backgroundColor= colorElegidoFondo
 })
@@ -202,7 +202,7 @@ botonContornoOscuro.addEventListener("click", () => {
 
 //ESPACIADO
 espaciado.addEventListener("input", event => {
-    const espaciadoElegido = event.target.value
+    let espaciadoElegido = event.target.value
     contenedorTextoSuperior.style.paddingTop = `${espaciadoElegido}px`
     contenedorTextoSuperior.style.paddingBottom = `${espaciadoElegido}px`
     contenedorTextoInferior.style.paddingTop = `${espaciadoElegido}px`
@@ -219,7 +219,7 @@ interlineado.addEventListener("click", event => {
 //SECCION IMAGEN
 
 colorFondoMeme.addEventListener("input", event => {
-    const colorFondoMemeElegido = event.target.value
+    let colorFondoMemeElegido = event.target.value
     memeImagen.style.backgroundColor = colorFondoMemeElegido
 })
 
@@ -227,7 +227,7 @@ colorFondoMeme.addEventListener("input", event => {
 //EFECTO DE FONDO
 
 efectoEstablecido.addEventListener("change", event => {
- const efecto = event.target.value
+    let efecto = event.target.value
     if(efecto == "Ninguno"){
         contenedorMeme.style.backgroundBlendMode = "normal"
     }else if(efecto == "Aclarar"){
@@ -246,46 +246,46 @@ efectoEstablecido.addEventListener("change", event => {
 
 //FILTROS
 brillo.addEventListener("change", event => {
-    const brilloElegido = event.target.value
+    let brilloElegido = event.target.value
     memeImagen.style.filter = `brightness(${brilloElegido}`
 })
 
 opacidad.addEventListener("change", event => {
-    const opacidadElegida = event.target.value
+    let opacidadElegida = event.target.value
     memeImagen.style.filter = `opacity(${opacidadElegida}`
 })
 
 contraste.addEventListener("change", event => {
-    const contrasteElegido = event.target.value
+    let contrasteElegido = event.target.value
     memeImagen.style.filter = `contrast(${contrasteElegido}`
 })
 
 desenfoque.addEventListener("change", event => {
-    const desenfoqueElegido = event.target.value
+    let desenfoqueElegido = event.target.value
     memeImagen.style.filter = `blur(${desenfoqueElegido}px`
 })
 
 escalaGrises.addEventListener("change", event => {
-    const escalaGrisesElegida = event.target.value
+    let escalaGrisesElegida = event.target.value
     memeImagen.style.filter = `grayscale(${escalaGrisesElegida}`
 })
 
 sepia.addEventListener("change", event => {
-    const sepiaElegido = event.target.value
+    let sepiaElegido = event.target.value
     memeImagen.style.filter = `sepia(${sepiaElegido}`
 })
 hue.addEventListener("change", event => {
-    const hueElegido = event.target.value
+    let hueElegido = event.target.value
     memeImagen.style.filter = `hue-rotate(${hueElegido}deg`
 })
 
 saturacion.addEventListener("change", event => {
-    const saturacionElegida = event.target.value
+    let saturacionElegida = event.target.value
     memeImagen.style.filter = `saturate(${saturacionElegida}`
 })
 
 negativo.addEventListener("change", event => {
-    const negativoElegido = event.target.value
+    let negativoElegido = event.target.value
     memeImagen.style.filter = `invert(${negativoElegido}`
 })
 
