@@ -152,16 +152,22 @@ tamanoFuente.addEventListener("input", event =>{
 // ALINEACION DE TEXTO
 
 botonIzquierda.addEventListener("click", event =>{
-    let alineacionElegida = event.target.value
-    parrafoTextoSuperior.style.textAlign = `${alineacionElegida}`
+    event.preventDefault();
+    parrafoTextoSuperior.style.textAlign = "left"
+    parrafoTextoInferior.style.textAlign = "left"
+
 })
 
-botonCentro.addEventListener("click", () =>{
+botonCentro.addEventListener("click", event =>{
+    event.preventDefault()
     parrafoTextoSuperior.style.textAlign = "center"
+    parrafoTextoInferior.style.textAlign = "center"
 })
 
-botonDerecha.addEventListener("click", () =>{
+botonDerecha.addEventListener("click", event =>{
+    event.preventDefault()
     parrafoTextoSuperior.style.textAlign = "right"
+    parrafoTextoInferior.style.textAlign = "right"
 })
 
 //CAMBIAR COLOR
