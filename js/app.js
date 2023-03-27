@@ -44,6 +44,7 @@ const botonContornoClaro = $("#btn-contorno-claro")
 const botonContornoOscuro = $("#btn-contorno-oscuro")
 const espaciado = $("#espaciado")
 const interlineado = $("#interlineado")
+const fondoTextoMeme = $(".meme-generador-texto")
 
 //VARIABLES SECCION IMAGEN
 const colorFondoMeme = $("#color-fondo-meme")
@@ -169,6 +170,19 @@ botonDerecha.addEventListener("click", event =>{
     parrafoTextoSuperior.style.textAlign = "right"
     parrafoTextoInferior.style.textAlign = "right"
 })
+
+fondoTransparente.addEventListener("change", (event) => {
+    event.preventDefault()
+    if(fondoTransparente.checked){
+        contenedorTextoSuperior.style.visibility = "hidden"
+        parrafoTextoSuperior.style.visibility = "visible"
+        contenedorTextoInferior.style.visibility = "hidden"
+        parrafoTextoInferior.style.visibility = "visible"
+    } else {
+        contenedorTextoSuperior.style.visibility = "visible"
+        contenedorTextoInferior.style.visibility = "visible"
+    }
+} )
 
 //CAMBIAR COLOR
 

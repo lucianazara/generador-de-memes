@@ -89,7 +89,7 @@ h1 {
     display: inline-block;
     width: 100%;
     height: 25%;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--color-texto);
 
 }
@@ -99,11 +99,12 @@ h2 {
 }
 nav {
     /* display: flex; */
-    height: 130px;
+    height: 150px;
     background-color: var(--nav-color);
     background-image: var(--background-nav);
     background-repeat: no-repeat;
     background-size: contain;
+    
 }
 
 
@@ -338,6 +339,7 @@ color: var(--color-texto);
 .colores {
     display: flex;
     gap: 20px;
+    padding: .5rem;
 }
 .color-seccion-texto {
     display: flex;
@@ -356,7 +358,11 @@ color: var(--color-texto);
     font-size: xx-large;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-        
+
+#fondo-transparente {
+    margin: .5rem;
+}
+
 .fondo-transparente {
     background-color: transparent;
 }
